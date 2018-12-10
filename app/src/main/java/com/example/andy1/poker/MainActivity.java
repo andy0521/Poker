@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Poker poker = new Poker();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new PokerAdapter());
 
     }
+
     class PokerAdapter extends  RecyclerView.Adapter<PokerAdapter.PokerHolder>{
 
         @NonNull
@@ -33,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull PokerAdapter.PokerHolder holder, int position) {
             holder.pokerTxet.setText(poker.card[position].get());
-        
+
+
+
         }
 
         @Override
